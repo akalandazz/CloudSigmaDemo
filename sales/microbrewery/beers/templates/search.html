@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for beer in beers %}
+<div class="card border-dark mt-2">
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2">
+      <small class="text-muted">{{beer.timestamp}}</small>
+    </h6>
+    <p class="card-text">{{beer.name}}</p>
+  </div>
+</div>
+{% empty %}
+No results for your search
+{% endfor %}
+
+
+{% endblock %}
